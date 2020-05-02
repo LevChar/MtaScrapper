@@ -1,12 +1,12 @@
 chrome.runtime.sendMessage({ todo: "showPageAction" });
 
-function clickInNewWindow() {
-  document
-    .getElementsByClassName("dropdown-menu")[1]
-    .getElementsByTagName("li")[0]
-    .getElementsByTagName("a")[0]
-    .click();
-}
+// function clickInNewWindow() {
+//   document
+//     .getElementsByClassName("dropdown-menu")[1]
+//     .getElementsByTagName("li")[0]
+//     .getElementsByTagName("a")[0]
+//     .click();
+// }
 
 chrome.runtime.onMessage.addListener(async function (
   request,
@@ -20,12 +20,12 @@ chrome.runtime.onMessage.addListener(async function (
     windowObjectReference.focus();
 
     // #0 Attempt:
-    // console.log(
-    // document
-    //   .getElementsByClassName("dropdown-menu")[1]
-    //   .getElementsByTagName("li")[0]
-    //   .getElementsByTagName("a")[0]
-    // );
+    console.log(
+      document
+        .getElementsByClassName("dropdown-menu")[1]
+        .getElementsByTagName("li")[0]
+        .getElementsByTagName("a")[0]
+    );
 
     // // #0 Attempt with click:
     // document
@@ -104,9 +104,9 @@ chrome.runtime.onMessage.addListener(async function (
     // };
 
     //#10 Attempt:
-    $(windowObjectReference).load(function () {
-      $(windowObjectReference.document).contents();
-    });
+    // $(windowObjectReference).load(function () {
+    //   $(windowObjectReference.document).contents();
+    // });
   }
 
   //#4 Attempt:

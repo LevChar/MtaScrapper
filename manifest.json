@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
-  "name": "PageFontStyle",
-  "description": "This extension changes the font style in a specific page.",
+  "name": "Mta Scrapper",
+  "description": "This extension used for collecting grades",
   "version": "1.0",
   "icons": {
     "128": "img/icon128.png",
@@ -20,8 +20,7 @@
   "content_scripts": [
     {
       "matches": ["https://rishum.mta.ac.il/yedion/fireflyweb.aspx"],
-      "js": ["content.js", "jquery-3.1.0.min.js"],
-      "css": ["content.css"]
+      "js": ["content.js", "jquery-3.1.0.min.js"]
     }
   ],
   "permissions": ["tabs", "https://rishum.mta.ac.il/yedion/fireflyweb.aspx"]
