@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>PageFontStyle</title>
+    <title>CRS - Courses Registration System</title>
     <script src="jquery-3.1.0.min.js"></script>
     <script src="popup.js"></script>
+    <script src="mustache.min.js"></script>
   </head>
   <style>
     body {
@@ -13,6 +14,15 @@
   </style>
 
   <body>
+    <h2 class>Completed Courses</h2>
+    <div id="Courses"></div>
+    <script id="Courses-template" type="text/html">
+      <ul class="courses">
+          [[#finished_courses]]
+          <li>[[.]]</li>
+          [[/finished_courses]]
+      </ul>
+    </script>
     <input type="submit" id="btnChange" value="Change" />
   </body>
 </html>

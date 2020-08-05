@@ -39,7 +39,6 @@ function getCompletedCourses(item) {
 
     // Extract all Courses from table:
     // ===============================
-
     curr_object = [];
     curr_JSONobj = {};
     listOfCompletedCourses = [];
@@ -92,9 +91,8 @@ chrome.runtime.onMessage.addListener(async function (
 
     //Get to grades page
     //==================
-
     document
-      .getElementsByClassName("dropdown-menu")[2]
+      .getElementsByClassName("dropdown-menu")[1]
       .getElementsByTagName("li")[0]
       .getElementsByTagName("a")[0]
       .click();
